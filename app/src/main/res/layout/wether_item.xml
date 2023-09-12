@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/wether"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:textColor="@color/white"
+        />
+     <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time"
+         android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        />
+ <androidx.cardview.widget.CardView
+     android:layout_width="400dp"
+     android:id="@+id/temperature"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/time"
+     app:cardBackgroundColor="#303F9F"
+     android:layout_margin="10dp">
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/Celsius"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/white"
+         android:layout_marginLeft="10dp"
+         android:text="29 °C"
+         android:textSize="30dp"/>
+
+         <TextView
+             android:id="@+id/Fahrenheit"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:layout_marginLeft="10dp"
+             android:layout_toRightOf="@id/Celsius"
+             android:text="(84.2°F)"
+             android:textColor="@color/white"
+             android:textSize="20dp" />
+     </RelativeLayout>
+
+ </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/temperature"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#303F9F"
+
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="min Tem"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/minCelsiuses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/min"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="25°C"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+            <TextView
+            android:id="@+id/max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="max Tem"
+                android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/maxCelsiuses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/max"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="34°C"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maxCelsiuses"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Rainy"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:text="Today-Light Rain Falling From Early \nMorning"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#303F9F"
+        android:layout_below="@id/result">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Location"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/latitue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:layout_marginLeft="20dp"
+                android:text="latitue : "
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+            android:id="@+id/lat"
+                android:layout_marginLeft="10dp"
+              android:layout_below="@+id/location"
+                android:layout_toRightOf="@id/latitue"/>
+
+            <TextView
+                android:id="@+id/logitute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/latitue"
+                android:layout_marginLeft="20dp"
+                android:text="logitute : "
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                 android:id="@+id/lng"
+                android:layout_marginLeft="10dp"
+              android:layout_below="@+id/latitue"
+                android:layout_toRightOf="@id/latitue"/>
+
+            <TextView
+                android:id="@+id/current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surat , Gujarat\nindia"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/lat"/>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>
